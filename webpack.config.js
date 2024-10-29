@@ -83,6 +83,17 @@ module.exports = (_, args) => {
             'sass-loader',
           ],
         },
+        {
+          test: /\.(png|jpe?g|gif|svg)$/i, // Проверка на изображение
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[path][name].[ext]',
+              },
+            },
+          ],
+        },
       ],
     },
     plugins: [
