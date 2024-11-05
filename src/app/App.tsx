@@ -1,13 +1,24 @@
 import React from 'react';
 import { Layout } from '../components/layout/Layout';
 import { Products } from '../components/products/Products';
+import { InputBtn } from '../components/inputBtn/InputBtn';
 import Cart from "src/components/cart/Cart";
+
+import { ThemeProvider } from '../components/header/ThemeContext';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../i18n';
+
 
 function App() {
   return (
-      <Layout>
-        <Products />
-      </Layout>
+      <I18nextProvider i18n={i18n}>
+          <ThemeProvider>
+              <Layout>
+                  <InputBtn />
+                {/*<Products />*/}
+              </Layout>
+          </ThemeProvider>
+      </I18nextProvider>
   );
 }
 

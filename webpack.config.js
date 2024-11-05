@@ -74,11 +74,11 @@ module.exports = (_, args) => {
             },
             {
               loader: 'css-loader',
-              options: {
-                modules: {
-                  localIdentName: '[name]_[local]-[hash:base64:5]',
-                },
-              },
+              // options: {
+              //   modules: {
+              //     localIdentName: '[name]_[local]-[hash:base64:5]',
+              //   },
+              // },
             },
             'sass-loader',
           ],
