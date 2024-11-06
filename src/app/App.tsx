@@ -15,7 +15,7 @@ function App() {
           <ThemeProvider>
               <Layout>
                   <InputBtn />
-                {/*<Products />*/}
+                <Products />
               </Layout>
           </ThemeProvider>
       </I18nextProvider>
