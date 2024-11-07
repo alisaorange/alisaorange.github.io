@@ -12,24 +12,43 @@
     transition: opacity 0.3s ease;
 }
 
-.modal-overlay--open {
-    opacity: 1;
-}
+/*.modal-overlay--open {*/
+/*    opacity: 1;*/
+/*}*/
 
-.modal-overlay--close {
-    opacity: 0;
-}
+/*.modal-overlay--close {*/
+/*    opacity: 0;*/
+/*}*/
 
 .modal-window {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 300px;
+    min-width: 300px;
     position: relative;
-    transform: scale(0.8);
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: width 0.3s ease, transform 0.3s ease;
 }
+
+.modal-overlay--open {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay--close {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/*.modal-window {*/
+/*    background-color: white;*/
+/*    padding: 20px;*/
+/*    border-radius: 8px;*/
+/*    width: 300px;*/
+/*    position: relative;*/
+/*    transform: scale(0.8);*/
+/*    opacity: 0;*/
+/*    transition: opacity 0.3s ease, transform 0.3s ease;*/
+/*}*/
 
 .modal-window--open {
     transform: scale(1);

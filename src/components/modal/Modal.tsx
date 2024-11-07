@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useReducer, useRef } from 'react';
+import React, { useLayoutEffect, useReducer, useRef} from 'react';
 import ReactDOM from 'react-dom';
 import './modal.css';
 
@@ -36,10 +36,10 @@ const reducer = (state: ModalState, action: ModalActionType): ModalState => {
 };
 
 export const Modal: React.FC<ModalProps> = ({ visible, onClose, children }) => {
-
     const [state, dispatch] = useReducer(reducer, { visible: false, mounted: false });
     const modalRef = useRef<HTMLDivElement>(null);
     const modalContentRef = useRef<HTMLDivElement>(null);
+    // const [modalWidth, setModalWidth] = useState(300);
 
     const handleTransitionEnd = (e: React.TransitionEvent) => {
         if (e.target !== e.currentTarget) return;
@@ -65,7 +65,7 @@ export const Modal: React.FC<ModalProps> = ({ visible, onClose, children }) => {
             onClick={onClose}
         >
             <div
-                ref={modalContentRef}
+                ref={modalRef}
                 className={`modal-window ${state.visible ? 'modal-window--open' : 'modal-window--close'}`}
                 onClick={(e) => e.stopPropagation()}
                 onTransitionEnd={handleTransitionEnd}
@@ -73,7 +73,9 @@ export const Modal: React.FC<ModalProps> = ({ visible, onClose, children }) => {
                 <button className="modal-close-button" onClick={onClose}>
                     ×
                 </button>
-                <div className="modal-content">{children}</div>
+                <div ref={modalContentRef} className="modal-content">
+                    {children}
+                </div>
             </div>
         </div>,
         document.body
