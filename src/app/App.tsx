@@ -11,14 +11,15 @@ import i18n from '../shared/i18n';
 
 function App() {
   return (
-      <I18nextProvider i18n={i18n}>
-          <ThemeProvider>
-              <Layout>
-                  <InputBtn />
-                <Products />
-              </Layout>
-          </ThemeProvider>
-      </I18nextProvider>
+      <List />
+      // <I18nextProvider i18n={i18n}>
+      //     <ThemeProvider>
+      //         <Layout>
+      //             <InputBtn />
+      //           <Products />
+      //         </Layout>
+      //     </ThemeProvider>
+      // </I18nextProvider>
   );
 }
 
@@ -26,6 +27,7 @@ export default App;
 
 import img1 from '../shared/images/image1.jpg';
 import img2 from '../shared/images/image2.jpg';
+import List from "src/components/list/List";
 
 //посмотреть страницу Корзина
 // const App = () => {
