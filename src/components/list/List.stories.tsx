@@ -11,10 +11,10 @@ const Template = (args) => <List {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    sneakers: sneakersList.slice(0, 10),
+    elements: sneakersList.slice(0, 10),
 };
 
 export const WithMoreSneakers = Template.bind({});
 WithMoreSneakers.args = {
-    sneakers: sneakersList.slice(0, 30),
+    elements: sneakersList.slice(0, 30),
 };
