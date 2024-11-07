@@ -1,5 +1,6 @@
 import React from 'react';
 import './сartButton.css';
+import {Button} from "src/shared/ui/button/Button";
 
 interface CartButtonProps {
     count: number;
@@ -12,9 +13,7 @@ export const CartButton: React.FC<CartButtonProps> = ({ count, onAdd, onIncrease
     return (
         <div className="cart-button">
             {count === 0 ? (
-                <button className="add-to-cart" onClick={onAdd}>
-                    В корзину
-                </button>
+                <Button label={'В корзину'} onClick={onAdd} />
             ) : (
                 <div className="quantity-control">
                     <button className="decrease" onClick={onDecrease}>-</button>

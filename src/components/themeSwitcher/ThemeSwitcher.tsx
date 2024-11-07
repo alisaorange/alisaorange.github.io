@@ -1,6 +1,6 @@
 // ThemeSwitcher.tsx
 import React from 'react';
-import { useTheme } from '../components/header/ThemeProvider';
+import { useTheme } from '../header/ThemeProvider';
 
 export const ThemeSwitcher: React.FC = () => {
     const { theme, toggleTheme } = useTheme();

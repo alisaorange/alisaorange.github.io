@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import OperationDetail from './OperationDetail';
-import img1 from '../../images/image1.jpg';
+import img1 from '../../shared/images/image1.jpg';
 export default {
     title: 'Components/OperationDetail',
     component: OperationDetail,

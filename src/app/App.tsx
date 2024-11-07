@@ -6,7 +6,7 @@ import Cart from "src/components/cart/Cart";
 
 import { ThemeProvider } from '../components/header/ThemeContext';
 import { I18nextProvider } from 'react-i18next';
-import i18n from '../i18n';
+import i18n from '../shared/i18n';
 
 
 function App() {
@@ -24,8 +24,8 @@ function App() {
 
 export default App;
 
-import img1 from '../images/image1.jpg';
-import img2 from '../images/image2.jpg';
+import img1 from '../shared/images/image1.jpg';
+import img2 from '../shared/images/image2.jpg';
 
 //посмотреть страницу Корзина
 // const App = () => {

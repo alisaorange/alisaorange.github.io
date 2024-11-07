@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import './inputBtn.css';
 import { Modal } from '../modal/Modal';
+import {Button} from "src/shared/ui/button/Button";
+import TextInput from "src/shared/ui/textInput/TextInput";
 
-export interface InputBtnProps {
-    initialText?: string;
-}
 
-export const InputBtn : React.FC<InputBtnProps> = () => {
+export const InputBtn : React.FC = () => {
 
     const [inputText, setInputText] = useState<string>('');
     const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
@@ -25,16 +24,12 @@ export const InputBtn : React.FC<InputBtnProps> = () => {
 
     return (
         <div className="input-container">
-            <input
-                type="text"
-                className="text-input"
+            <TextInput
                 placeholder="Введите текст"
                 value={inputText}
                 onChange={handleInputChange}
             />
-            <button className="open-button" onClick={openModal}>
-                Открыть
-            </button>
+            <Button label={'Открыть'} onClick={openModal} />
 
             <Modal visible={isModalVisible} onClose={closeModal}>
                 <div>
@@ -45,4 +40,7 @@ export const InputBtn : React.FC<InputBtnProps> = () => {
         </div>
     );
 
+}
+
+export class InputBtnProps {
 }

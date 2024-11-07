@@ -11,28 +11,6 @@
     z-index: 1000;
 }
 
-.nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    margin: 10px;
-}
-
 .content {
     margin-top: 90px;
-}
-
-.nav-links a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
 }

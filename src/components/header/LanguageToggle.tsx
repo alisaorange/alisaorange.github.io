@@ -1,18 +1,26 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import ToggleButton from "src/shared/ui/toggleButton/ToggleButton";
 
 export const LanguageToggle: React.FC = () => {
     const { i18n } = useTranslation();
 
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng);
+    const changeLanguageToEnglish = () => {
+        i18n.changeLanguage('en');
+    };
+
+    const changeLanguageToRussian = () => {
+        i18n.changeLanguage('ru');
     };
 
     return (
-        <div>
-            <button onClick={() => changeLanguage('en')}>EN</button>
-            <button onClick={() => changeLanguage('ru')}>RU</button>
-        </div>
+        <ToggleButton
+            leftLabel="EN"
+            rightLabel="RU"
+            onClickLeft={changeLanguageToEnglish}
+            onClickRight={changeLanguageToRussian}
+            isLeftActive={i18n.language === 'en'}
+        />
     );
 };
 

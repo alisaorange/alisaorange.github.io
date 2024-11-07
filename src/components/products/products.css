@@ -28,16 +28,7 @@
         width: calc(100% - 20px);
     }
 }
-.show-more{
-    background-color: #28a745;
-    color: #ffffff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 16px;
-    margin: 10px;
-}
+
 .btn-center{
     display: flex;
     align-items: center;

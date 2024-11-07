@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { ThemeSwitcher } from './ThemeSwitcher';
-import { ThemeProvider } from '../components/header/ThemeProvider';
+import { ThemeProvider } from '../header/ThemeProvider';
 import './themeSwitcher.css';
 
 export default {

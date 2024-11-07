@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import ProductPreview from './ProductPreview';
-import img1 from '../../images/image1.jpg';
+import img1 from '../../shared/images/image1.jpg';
 
 export default {
     title: 'Components/ProductPreview',
