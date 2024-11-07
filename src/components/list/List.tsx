@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
-import {sneakersList} from 'src/shared/sneakers_list';
 import './list.css';
 
 export interface ListProps {
@@ -16,7 +15,7 @@ export const List: React.FC<ListProps> = ({elements}) => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        setDisplayedElements(sneakersList.slice(0, 10));
+        setDisplayedElements(elements.slice(0, 10));
     }, []);
 
 
@@ -54,7 +53,7 @@ export const List: React.FC<ListProps> = ({elements}) => {
 
     const loadMoreItems = () => {
         setLoading(true);
-        const nextItems = sneakersList.slice(displayedElements.length, displayedElements.length + 10);
+        const nextItems = elements.slice(displayedElements.length, displayedElements.length + 10);
         setTimeout(() => {
             setDisplayedElements((prev) => [...prev, ...nextItems]);
             setLoading(false);

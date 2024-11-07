@@ -7,11 +7,12 @@ import Cart from "src/components/cart/Cart";
 import { ThemeProvider } from '../components/header/ThemeContext';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../shared/i18n';
+import {sneakersList} from 'src/shared/sneakers_list';
 
 
 function App() {
   return (
-      <List />
+      <List  elements={sneakersList}/>
       // <I18nextProvider i18n={i18n}>
       //     <ThemeProvider>
       //         <Layout>
