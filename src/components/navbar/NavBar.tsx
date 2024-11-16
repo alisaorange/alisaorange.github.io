@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navBar.css';
 
 interface NavLink {
@@ -11,9 +12,9 @@ interface NavBarProps {
 }
 
 const NavLinkItem: React.FC<NavLink> = React.memo(({ label, href }) => (
-    <a href={href} className="nav-link">
+    <Link to={href} className="nav-link">
         {label}
-    </a>
+    </Link>
 ));
 
 const NavBar: React.FC<NavBarProps> = ({ links }) => {
@@ -29,3 +30,14 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 };
 
 export default NavBar;
+
+// const NavBar: React.FC = () => {
+//     return (
+//         <nav className="nav">
+//             <Link to="/" className="nav-link">Главная</Link>
+//             <Link to="/profile" className="nav-link">Профиль</Link>
+//         </nav>
+//     );
+// };
+//
+// export default NavBar;

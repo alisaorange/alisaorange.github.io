@@ -27,14 +27,17 @@ export default {
 } as Meta;
 
 const Template: Story<{
+    id: number;
     price: number;
     imageUrl: string;
     name: string;
     description: string;
+    onEdit: () => void;
 }> = (args) => <ProductPreview {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+    id: 1,
     price: 9999,
     imageUrl: img1,
     name: 'Кроссовки Nike Air Max',

@@ -9,6 +9,11 @@ const resources = {
             contacts: "Contacts",
             theme_black: "Theme black",
             theme_white: "Theme white",
+            login: "Login",
+            register: "Register",
+            profile: "Profile",
+            products: "List of products",
+            new_product: "Add new product",
         },
     },
     ru: {
@@ -18,6 +23,11 @@ const resources = {
             contacts: "Контакты",
             theme_black: "Темная тема",
             theme_white: "Светлая тема",
+            login: "Войти",
+            register: "Регистрация",
+            profile: "Профиль",
+            products: "Список продуктов",
+            new_product: "Добавить новый товар",
         },
     },
 };

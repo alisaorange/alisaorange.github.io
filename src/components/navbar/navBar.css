@@ -11,11 +11,11 @@
 }
 
 .nav-link {
-    color: #007bff; /* Цвет текста */
+    color: #007bff;
     text-decoration: none;
     font-size: 16px;
     position: relative;
-    padding-bottom: 4px; /* Подсказка для пространства под текстом */
+    padding-bottom: 4px;
     transition: color 0.3s ease;
 }
 

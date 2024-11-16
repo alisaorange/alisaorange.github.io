@@ -9,7 +9,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ type, size = 'medium', label, onClick, ...props }) => {
+export const Button: FC<ButtonProps> = ({ type, size = 'medium', label, onClick, ...props }) => {
     const mode = type ? 'storybook-button--type-two' : 'storybook-button--type-one';
 
     return (

@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import './productPreview.css';
-import {CartButton} from '../cartButton/CartButton';
 
 interface ProductPreviewProps {
     price: number;
     imageUrl: string;
     name: string;
     description: string;
+    onEdit: () => void;
 }
 
-const ProductPreview: React.FC<ProductPreviewProps> = ({ price, imageUrl, name, description }) => {
+const ProductPreview: React.FC<ProductPreviewProps> = ({ price, imageUrl, name, description, onEdit }) => {
 
     const [count, setCount] = useState(0);
     const handleAddToCart = () => setCount(1);
@@ -23,15 +23,12 @@ const ProductPreview: React.FC<ProductPreviewProps> = ({ price, imageUrl, name, 
             <p className="product-description">{description.length > 100 ? `${description.slice(0, 100)}...` : description}</p>
             <p className="product-price">{`₽${price.toFixed(2)}`}</p>
 
-            <span className="cart-button-container">
-                <CartButton
-                    count={count}
-                    onAdd={handleAddToCart}
-                    onIncrease={handleIncrease}
-                    onDecrease={handleDecrease}
-                />
-            </span>
+            <button onClick={onEdit} className="edit-button">
+                Редактировать
+            </button>
         </div>
+
+
     );
 };
 
