@@ -11,9 +11,9 @@ const Template: ComponentStory<typeof ProductForm> = (args) => <ProductForm {...
 
 export const Default = Template.bind({});
 Default.args = {
-    onSave: (product) => {
-        console.log('Сохранён продукт:', product);
-    },
+    // onSave: (product) => {
+    //     console.log('Сохранён продукт:', product);
+    // },
 };
 
 export const WithInitialValues = Template.bind({});
@@ -25,7 +25,7 @@ WithInitialValues.args = {
         imageUrl: 'https://example.com/nike.jpg',
         description: 'Популярные кроссовки Nike.',
     },
-    onSave: (product) => {
-        console.log('Обновлён продукт:', product);
-    },
+    // onSave: (product) => {
+    //     console.log('Обновлён продукт:', product);
+    // },
 };
