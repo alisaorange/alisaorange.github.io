@@ -13,6 +13,7 @@ import ProductForm from "src/components/forms/ProductForm";
 import ThemeToggle from "src/components/header/ThemeToggle";
 
 import { sneakers } from 'src/shared/sneakers';
+import {useAuth} from "src/shared/hooks/AuthContext";
 
 export const Header: React.FC = () => {
 
@@ -21,6 +22,7 @@ export const Header: React.FC = () => {
     const links = [
         { label: t('home'), href: '/' },
         { label: t('profile'), href: '/profile' },
+        { label: t('cart'), href: '/cart' },
     ];
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,6 +58,8 @@ export const Header: React.FC = () => {
         setIsModalOpen(false);
     };
 
+    const { isAuthenticated, login, logout } = useAuth();
+
    return (
         <header className="header">
 
@@ -68,6 +72,12 @@ export const Header: React.FC = () => {
             <div className="header-item">
                 <ThemeToggle />
                 <LanguageToggle />
+
+                {/*{isAuthenticated ? (*/}
+                {/*    <button onClick={logout}>Выйти</button>*/}
+                {/*) : (*/}
+                {/*    <button onClick={() => login('dummy-token')}>Войти</button>*/}
+                {/*)}*/}
 
                 <div className="items">
                     <Button label={t('login')} onClick={handleOpenModal} />
