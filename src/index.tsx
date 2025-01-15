@@ -1,19 +1,19 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { store } from './app/providers/StoreProvider';
 import App from './app/App';
-import { Paths } from './routes/Paths';
-import { AuthProvider } from './shared/hooks/AuthContext';
+// import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
-  <StrictMode>
-    {/*<Paths />*/}
-    <BrowserRouter>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </BrowserRouter>
-  </StrictMode>
+    <React.StrictMode>
+        <Provider store={store}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </Provider>
+    </React.StrictMode>
 );
