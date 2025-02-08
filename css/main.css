@@ -336,12 +336,12 @@ button:disabled {
 }
 
 .cart-items {
-    flex: 2;
-    margin-right: 20px;
+    /*flex: 2;*/
+    /*margin-right: 20px;*/
 }
 
 .cart-summary {
-    flex: 1;
+    /*flex: 1;*/
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -395,6 +395,49 @@ button:disabled {
     background-color: #d32f2f;
 }
 
+.green{
+    background-color: #4caf50;
+}
+
+.green:hover{
+    background-color: #7dc980;
+}
+
+.orders {
+    /*margin-top: 30px;*/
+}
+
+.order {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f9f9f9;
+}
+
+.order p {
+    margin: 5px 0;
+}
+
+.order ul {
+    padding-left: 20px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cart-summary {
+    margin-bottom: 20px; /* Отступ перед заказами */
+}
+
+.orders {
+    margin-top: auto; /* Прижимаем блок к низу */
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
+
 
 .storybook-button {
     border: none;
@@ -412,6 +455,64 @@ button:disabled {
     background-color: #c91e39;
 }
 
+.product-form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.product-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-form input,
+.product-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.product-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:disabled {
+    background: #ccc;
+}
+
+.message {
+    text-align: center;
+    margin-top: 10px;
+    color: green;
+}
 body{
     margin: 0!important;
 }
