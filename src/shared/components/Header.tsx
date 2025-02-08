@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header-item">
-        <div className="logo">Лого</div>
+        <div className="logo"><img src={'https://brandwiki.ru/up/brands/product/190507_55.webp'} width={50} height={50}/></div>
         <NavBar links={links} />
         {!token ? (
             <Button label={t('login')} onClick={handleOpenLoginModal} />

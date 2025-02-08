@@ -51,9 +51,11 @@ const fetchProducts = async (pageNumber: number, pageSize: number = 10): Promise
                     pageNumber,
                 }),
                 sorting: JSON.stringify({ type: 'ASC', field: 'id' }),
+                categoryIds: JSON.stringify(["67a50b748e877ac8a963fa3b"]), // Добавлен фильтр по категории
             },
         }
     );
+
     console.log('fetchProducts response', response.data);
     return response.data;
 };

@@ -5,6 +5,13 @@ import Pagination from "src/shared/components/Pagination";
 import ProductsList from "src/shared/components/ProductsList";
 import Loader from "src/shared/components/Loader";
 
+interface Product {
+    id: string;
+    name: string;
+    price: number;
+    photo: string;
+}
+
 const HomePage: React.FC = () => {
     const dispatch = useDispatch();
     const { products, isLoading, error, totalPages, currentPage } = useSelector((state: RootState) => state.products);
@@ -20,37 +27,26 @@ const HomePage: React.FC = () => {
     };
 
     if (isLoading) {
-        // return <p>Loading...</p>;
-        return <Loader />;;
+        return <Loader />;
     }
 
     if (error) {
         return <p>Error: {error}</p>;
     }
 
+    const addToCart = (product: Product) => {
+        const storedCart = localStorage.getItem('cart');
+        const cartItems = storedCart ? JSON.parse(storedCart) : [];
+        const updatedCart = [...cartItems, product];
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        alert(`${product.name} добавлен в корзину!`);
+    };
+
     return (
         <div>
             <h1>Товары</h1>
-            <ProductsList products={products} />
-            {/*<div className="products-list">*/}
-            {/*    {products.map((product) => (*/}
-            {/*        <div key={product.id} className="product-card">*/}
-            {/*            <img src={product.photo} alt={product.name} className="product-image" />*/}
-            {/*            <h3 className="product-name">{product.name}</h3>*/}
-            {/*            <p className="product-price">${product.price}</p>*/}
-            {/*            <button className="add-to-cart-btn">Добавить</button>*/}
-            {/*        </div>*/}
-            {/*    ))}*/}
-            {/*</div>*/}
+            <ProductsList products={products} onAdd={addToCart} />
             <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
-            {/*<Pagination*/}
-            {/*    currentPage={currentPage}*/}
-            {/*    totalPages={totalPages}*/}
-            {/*    onPageChange={(page) => {*/}
-            {/*        // dispatch(setProducts({ products: [], totalPages, currentPage: page }));*/}
-            {/*        dispatch(setProducts({ pageNumber: page, pageSize: 10 }));*/}
-            {/*    }}*/}
-            {/*/>*/}
         </div>
     );
 };

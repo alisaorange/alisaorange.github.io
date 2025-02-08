@@ -7,12 +7,12 @@
 }
 
 .cart-items {
-    flex: 2;
-    margin-right: 20px;
+    /*flex: 2;*/
+    /*margin-right: 20px;*/
 }
 
 .cart-summary {
-    flex: 1;
+    /*flex: 1;*/
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -64,5 +64,48 @@
 
 .cart-item-remove-button:hover {
     background-color: #d32f2f;
+}
+
+.green{
+    background-color: #4caf50;
+}
+
+.green:hover{
+    background-color: #7dc980;
+}
+
+.orders {
+    /*margin-top: 30px;*/
+}
+
+.order {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f9f9f9;
+}
+
+.order p {
+    margin: 5px 0;
+}
+
+.order ul {
+    padding-left: 20px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cart-summary {
+    margin-bottom: 20px; /* Отступ перед заказами */
+}
+
+.orders {
+    margin-top: auto; /* Прижимаем блок к низу */
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
 }
 

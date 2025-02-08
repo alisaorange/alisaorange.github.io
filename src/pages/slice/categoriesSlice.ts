@@ -81,15 +81,15 @@ export const createCategory = (category: { name: string }) => async (dispatch: A
     dispatch(createCategoryStart());
     try {
         const token = getState().auth.token; // Получаем токен из authSlice
-        const response = await axios.post(
-            'http://19429ba06ff2.vps.myjino.ru/api/categories',
-            category,
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            }
-        );
+        // const response = await axios.post(
+        //     'http://19429ba06ff2.vps.myjino.ru/api/categories',
+        //     category,
+        //     {
+        //         headers: {
+        //             Authorization: `Bearer ${token}`,
+        //         },
+        //     }
+        // );
         dispatch(createCategorySuccess());
         dispatch(fetchCategories()); // Обновить список категорий
     } catch (error) {

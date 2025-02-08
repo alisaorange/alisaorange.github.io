@@ -10,7 +10,7 @@ const CategoryList: React.FC<CategoryListProps> = ({ categories }) => {
         <div className="category-list-container">
             {categories.map((category) => (
                 <div key={category.id} className="category-list-item">
-                    {category.name}
+                    {category.name} - {category.id}
                 </div>
             ))}
         </div>

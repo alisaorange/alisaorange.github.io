@@ -8,6 +8,8 @@ import CartPage from '../../pages/CartPage';
 import ProtectedRoute from './ProtectedRoute';
 import {useSelector} from "react-redux";
 import {RootState} from "src/app/providers/StoreProvider";
+import CreateProductPage from "src/pages/CreateProductPage";
+import EditProductPage from "src/pages/EditProductPage";
 
 const AppRouter: React.FC = () => {
     // const role = useSelector((state: RootState) => state.auth.role);
@@ -33,6 +35,14 @@ const AppRouter: React.FC = () => {
 
             {role == 'admin' ? (
                     <Route path="/admin" element={<AdminPage />} />
+            ) : null}
+
+            {role == 'admin' ? (
+                <Route path="/create-product" element={<CreateProductPage />} />
+            ) : null}
+
+            {role == 'admin' ? (
+                <Route path="/edit-product/:id" element={<EditProductPage />} />
             ) : null}
 
             {/* Страница корзины */}
